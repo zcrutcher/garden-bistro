@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import "../node_modules/bulma/bulma.sass"; */
 
 :root {
   --foreground-rgb: 0, 0, 0;
