@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import "./styles.css";
 
 const MenuItem = ({ id, title, description, img }) => {
   return (
@@ -9,8 +10,8 @@ const MenuItem = ({ id, title, description, img }) => {
           <Image
             src={`/assets/menu/imgs/${img}`}
             alt={title}
-            height="100"
-            width="100"
+            height="288"
+            width="216"
           />
         </figure>
       </div>
