@@ -5,6 +5,7 @@ import MenuItem from "./MenuItem";
 const Menu = async () => {
   const menu = await fetch("http://localhost:3000/api/menu")
     .then((data) => {
+      console.log("data", data);
       return data.json();
     })
     .then((data) => data.results);

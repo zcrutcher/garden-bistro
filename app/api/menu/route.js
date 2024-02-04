@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
-const menu = await prisma.menuItem.findMany();
-export const GET = async (request) => {
+export const GET = async () => {
+  const prisma = new PrismaClient();
+  const menu = await prisma.menuItem.findMany();
   return NextResponse.json({ results: menu });
 };

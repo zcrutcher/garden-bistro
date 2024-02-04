@@ -1,4 +1,5 @@
-import { PrismaClient } from "@prisma/client";
+const Prisma = require("@prisma/client");
+const PrismaClient = Prisma.PrismaClient;
 const prisma = new PrismaClient();
 
 async function main() {
