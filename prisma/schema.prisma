@@ -17,3 +17,10 @@ model MenuItem {
   description String
   image String
 }
+
+model Contact {
+  id Int @id @default(autoincrement())
+  email String
+  phone String
+  message String
+}
