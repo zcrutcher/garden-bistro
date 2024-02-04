@@ -13,7 +13,7 @@ datasource db {
 
 model MenuItem {
   id Int @id @default(autoincrement())
-  title String
+  title String @unique
   description String
   image String
 }
