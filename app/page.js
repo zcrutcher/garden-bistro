@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import "./globals.css";
 export default function Home() {
   return (
     <div className="container">
@@ -11,7 +11,7 @@ export default function Home() {
           src="/assets/home/imgs/home-banner.jpg"
           alt="Table Settings"
           className="home-banner"
-          width={931}
+          width={1024}
           height={236}
         />
         <h3 className="is-size-3 has-text-centered">Join us for dinner</h3>
