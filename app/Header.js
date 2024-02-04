@@ -68,7 +68,7 @@ const Header = () => {
             <Link className="navbar-item" href="/menu" onClick={resetNav}>
               Menu
             </Link>
-            <Link className="navbar-item" href="/aboutUs" onClick={resetNav}>
+            <Link className="navbar-item" href="/about" onClick={resetNav}>
               About Us
             </Link>
             <Link
