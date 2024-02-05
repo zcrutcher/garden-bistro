@@ -24,3 +24,11 @@ model Contact {
   phone String
   message String
 }
+
+model Review{
+  id Int @id @default(autoincrement())
+  firstName String
+  stars Int
+  message String
+  image String
+}
