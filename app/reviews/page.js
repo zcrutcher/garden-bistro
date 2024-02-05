@@ -6,10 +6,7 @@ import Review from "./Review";
 const Reviews = async () => {
   const reviews = await fetch("http://localhost:3000/api/reviews")
     .then((res) => res.json())
-    .then((data) => {
-      console.log("data", data.results);
-      return data.results;
-    });
+    .then((data) => data.results);
   return (
     <div className="container">
       <h2 className="title is-size-2 has-text-centered block">Reviews</h2>
