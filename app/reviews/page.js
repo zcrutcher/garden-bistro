@@ -2,9 +2,12 @@
 
 import React from "react";
 import Review from "./Review";
+import nextConfig from "@/next.config.mjs";
 
 const Reviews = async () => {
-  const reviews = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/reviews`)
+  const reviews = await fetch(
+    `${nextConfig.env.NEXT_PUBLIC_APP_URL}/api/reviews`
+  )
     .then((res) => res.json())
     .then((data) => data.results);
   return (

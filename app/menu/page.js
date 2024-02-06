@@ -1,9 +1,10 @@
 "use server";
 import React from "react";
 import MenuItem from "./MenuItem";
+import nextConfig from "@/next.config.mjs";
 
 const Menu = async () => {
-  const menu = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/menu`)
+  const menu = await fetch(`${nextConfig.env.NEXT_PUBLIC_APP_URL}/api/menu`)
     .then((data) => data.json())
     .then((data) => data.results);
 
