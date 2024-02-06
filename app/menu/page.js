@@ -3,13 +3,8 @@ import React from "react";
 import MenuItem from "./MenuItem";
 
 const Menu = async () => {
-  const menu = await fetch(
-    `https://${process.env.NEXT_PUBLIC_APP_URL}/api/menu`
-  )
-    .then((data) => {
-      console.log("data", data);
-      return data.json();
-    })
+  const menu = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/menu`)
+    .then((data) => data.json())
     .then((data) => data.results);
 
   return (
