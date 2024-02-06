@@ -3,7 +3,6 @@ import { PrismaClient } from "@prisma/client";
 
 export const GET = async () => {
   const prisma = new PrismaClient();
-  let reviews = await prisma.review.findMany();
-  if (!reviews) reviews = [];
+  const reviews = await prisma.review.findMany();
   return NextResponse.json({ results: reviews });
 };
