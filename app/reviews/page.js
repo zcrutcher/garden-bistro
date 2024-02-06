@@ -4,7 +4,7 @@ import React from "react";
 import Review from "./Review";
 
 const Reviews = async () => {
-  const reviews = await fetch("http://localhost:3000/api/reviews")
+  const reviews = await fetch(`${NEXT_PUBLIC_APP_URL}api/reviews`)
     .then((res) => res.json())
     .then((data) => data.results);
   return (
