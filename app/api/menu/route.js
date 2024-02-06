@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 
 export const GET = async () => {
   const prisma = new PrismaClient();
-  const menu = await prisma.menuItem.findMany();
-  if (!menu) return [];
+  let menu = await prisma.menuItem.findMany();
+  if (!menu) menu = [];
   return NextResponse.json({ results: menu });
 };
