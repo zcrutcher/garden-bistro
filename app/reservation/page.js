@@ -92,6 +92,7 @@ const Reservation = () => {
       body: JSON.stringify(formData),
     });
     if (!res.ok) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       return setMessage({
         success: false,
         message: "Failed to create reservation",
