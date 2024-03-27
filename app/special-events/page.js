@@ -6,7 +6,7 @@ import { PrismaClient } from "@prisma/client";
 const SpecialEvents = async () => {
   const prisma = new PrismaClient();
   const events = await prisma.specialEvent.findMany();
-  console.log("events", events);
+
   return (
     <div className="container">
       <h2 className=" title is-size-2 has-text-centered block">

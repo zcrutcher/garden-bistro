@@ -13,32 +13,6 @@ const Detail = async ({ params }) => {
       additional: true,
     },
   });
-  //const [appState, setAppState] = useState({ status: "idle", error: "" });
-  // const [data, setData] = useState();
-
-  //const { id } = useParams();
-
-  // useEffect(() => {
-  //   setAppState({ ...appState, status: "pending" });
-  //   fetch(`/api/special-events/${id}`)
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error("Failed to fetch event data");
-  //       }
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       setAppState({ status: "resolved", error: "" });
-  //       setData(data.results);
-  //     })
-  //     .catch((error) => {
-  //       console.error(error);
-  //       setAppState({
-  //         status: "rejected",
-  //         error: "Failed to fetch event data, please refresh and try again",
-  //       });
-  //     });
-  // }, []);
 
   return (
     <div className="container">
