@@ -44,3 +44,18 @@ model Reservation {
   email String
   specialRequests String?
 }
+
+model SpecialEvent{
+  id Int @id @default(autoincrement())
+  title String
+  summary String
+  additional SpecialEventAdditional[]
+}
+
+model SpecialEventAdditional{
+  id Int @id @default(autoincrement())
+  subTitle String
+  summary String
+  specialEvent SpecialEvent @relation(fields: [specialEventId], references: [id])
+  specialEventId Int
+}
