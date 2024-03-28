@@ -1,18 +1,16 @@
 "use server";
 
 import Image from "next/image";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Review = ({ firstName, stars, message, img }) => {
-  const renderStars = (stars) => {
-    const list = [];
-    for (let i = 0; i < stars; i++) {
-      list.push(<i id="stars" className="fas fa-star" />);
-    }
-    return list;
-  };
-
   return (
     <div className="card-content box">
+      <script
+        defer
+        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+      ></script>
       <div className="media">
         <div className="media-left">
           <figure className="image is-64x64 is-clipped">
@@ -30,7 +28,11 @@ const Review = ({ firstName, stars, message, img }) => {
             <div>
               <p className="title is-4 mb-0 block">{firstName}</p>
               <p className="icon has-text-warning block">
-                {renderStars(stars)}
+                <div className="is-flex is-flex-direction-row">
+                  {Array.apply(null, { length: stars }).map((_, i) => (
+                    <FontAwesomeIcon icon={faStar} key={i} />
+                  ))}
+                </div>
               </p>
             </div>
           </div>
