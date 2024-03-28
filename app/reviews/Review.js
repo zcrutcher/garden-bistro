@@ -27,13 +27,13 @@ const Review = ({ firstName, stars, message, img }) => {
           <div className="level-item has-text-centered">
             <div>
               <p className="title is-4 mb-0 block">{firstName}</p>
-              <p className="icon has-text-warning block">
+              <div className="icon has-text-warning block">
                 <div className="is-flex is-flex-direction-row">
                   {Array.apply(null, { length: stars }).map((_, i) => (
                     <FontAwesomeIcon icon={faStar} key={i} />
                   ))}
                 </div>
-              </p>
+              </div>
             </div>
           </div>
         </div>
